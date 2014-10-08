@@ -10,6 +10,9 @@ public class FunctionalInterfaceExample {
 	@FunctionalInterface
 	interface PasswordEncoder{
 		public String encode(String password ,String name); 
+		public default void testingDefault(){
+			System.out.println("PRINTNG DEFAULT");
+		}
 	}
 	
 	public PasswordEncoder passwordEncoder(){
